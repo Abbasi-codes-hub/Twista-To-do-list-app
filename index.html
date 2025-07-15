@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Charset & Viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>
+      Twista To-Do App — Make Your Day Productive | Customizable Task Manager
+    </title>
+    <meta name="title" content="Twista To-Do App — Make Your Day Productive" />
+    <meta
+      name="description"
+      content="Twista is a customizable and responsive to-do list app built with HTML, CSS, and JavaScript. Organize your day with simplicity and style."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://Abbasi-codes-hub.github.io/Twista-To-do-list-app/"
+    />
+    <meta
+      property="og:title"
+      content="Twista To-Do App — Customizable Task Manager"
+    />
+    <meta
+      property="og:description"
+      content="Twista is a sleek and responsive to-do list app crafted with HTML, CSS, and JavaScript. Organize your day with simplicity and speed."
+    />
+    <meta
+      property="og:image"
+      content="https://Abbasi-codes-hub.github.io/Twista-To-do-list-app/assets/Todolist-app-banner.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://Abbasi-codes-hub.github.io/Twista-To-do-list-app/"
+    />
+    <meta
+      property="twitter:title"
+      content="Twista To-Do App — Customizable Task Manager"
+    />
+    <meta
+      property="twitter:description"
+      content="Twista is a sleek and responsive to-do list app crafted with HTML, CSS, and JavaScript. Organize your day with simplicity and speed."
+    />
+    <meta
+      property="twitter:image"
+      content="https://Abbasi-codes-hub.github.io/Twista-To-do-list-app/assets/Todolist-app-banner.png"
+    />
+
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Urbanist:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="assets/favicon-icon.png" type="image/png" />
+    <link rel="stylesheet" href="styling/style.css" />
+  </head>
+
+  <body>
+    <!-- Skip link for keyboard users -->
+    <main>
+      <a
+        href="#todo-list"
+        class="skip-link"
+        style="
+          position: absolute;
+          top: -40px;
+          left: 0;
+          background: #000;
+          color: #fff;
+          padding: 8px;
+          z-index: 100;
+          transition: top 0.3s;
+        "
+        >Skip to tasks</a
+      >
+
+      <div class="brand-container" role="banner">
+        <div class="dark-mode">
+          <div class="imgae-container">
+            <img
+              src="assets/Dark Mode.webp"
+              alt="toggle dark mode image"
+              class="toogle"
+              loading="lazy"
+              width="auto"
+              height="auto"
+            />
+          </div>
+        </div>
+        <div class="brand-content">
+          <h1 class="brand-title">TaskNest</h1>
+          <p class="brand-para">
+            Stay on top of your day with TaskNest — your personal space to
+            capture, organize, and conquer tasks. Productivity made simple and
+            smart!
+          </p>
+        </div>
+      </div>
+      <section class="form-container">
+        <form aria-label="Add new task form" onsubmit="return false;">
+          <div class="search-container">
+            <input
+              type="search"
+              name="search"
+              id="search"
+              autocomplete="off"
+              autocapitalize="off"
+              placeholder="lets get something done!"
+              class="inputvalue"
+              maxlength="20"
+              aria-required="true"
+            />
+          </div>
+          <button type="submit" class="addBTn" aria-label="Save task">
+            Save Task
+          </button>
+        </form>
+      </section>
+      <section
+        id="todo-list"
+        class="Todo-lists-container"
+        aria-live="polite"
+        aria-label="To-do list container"
+      >
+        <!-- <div class="lists">
+        <li>hello apple</li>
+        <button type="button" class="deleteBtn">Remove</button>
+      </div>
+      <div class="lists">
+        <li>hello apple</li>
+        <button type="button" class="deleteBtn">Remove</button>
+      </div> -->
+      </section>
+      <section class="message-container positionright">
+        <div class="msg">
+          <img
+            src="assets/done.png"
+            alt="image for list added or remove for mesage"
+            class="image-mesg"
+            loading="lazy"
+            width="auto"
+            height="auto"
+          />
+          <p class="msg-para">successfully removed</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="logic/main.js"></script>
+
+    <style>
+      .skip-link:focus {
+        top: 0 !important;
+      }
+    </style>
+  </body>
+</html>
