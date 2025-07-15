@@ -1,13 +1,13 @@
 :root {
   --primary-color: orange;
-  --secondary-color: rgba(133, 132, 132, 0.284);
+  --secondary-color: rgb(0, 0, 0);
   --border-radius: 1rem;
   --transition: all 0.4s linear;
   --input-shadow: rgba(179, 179, 179, 0.02) 0px 1px 3px 0px,
     rgba(60, 68, 76, 0.382) 0px 0px 0px 1px;
   --light-bg: rgba(190, 188, 188, 0.73);
   --dark-bg: rgba(158, 156, 156, 0.73);
-  --msg-success-color: rgb(37, 111, 23);
+  --msg-success-color: rgb(41, 155, 18);
   --msg-error-color: red;
 }
 
@@ -184,7 +184,7 @@ input::placeholder {
   border-radius: var(--border-radius);
   position: absolute;
   top: 1rem;
-  right: 10rem;
+  right: .7rem;
   transition: var(--transition);
 }
 
@@ -193,7 +193,7 @@ input::placeholder {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 2rem;
+  padding-right: 1rem;
   border-radius: var(--border-radius);
 }
 
@@ -231,21 +231,11 @@ input::placeholder {
   .addBTn {
     width: 30%;
   }
-  .message-container {
-    position: absolute;
-    top: 1rem;
-    right: 7rem;
-  }
 }
 
 @media (min-width: 1000px) and (max-width: 1400px) {
   .brand-para {
     padding: 0 29rem;
-  }
-  .message-container {
-    position: absolute;
-    top: 1rem;
-    right: 7rem;
   }
 }
 
@@ -266,10 +256,5 @@ input::placeholder {
 
   .brand-para {
     padding: 0 4rem;
-  }
-  .message-container {
-    position: absolute;
-    top: 1rem;
-    right: 7rem;
   }
 }
