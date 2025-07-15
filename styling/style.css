@@ -1,17 +1,18 @@
 :root {
-  --primary-color: orange;
-  --secondary-color: rgba(255, 255, 255, 0.832);
-  --border-radius: 1rem;
+  --primary: orange;
+  --secondary: rgba(255, 255, 255, 0.832);
+  --radius: 1rem;
   --transition: all 0.4s linear;
-  --input-shadow: rgba(179, 179, 179, 0.02) 0px 1px 3px 0px,
+  --shadow: rgba(179, 179, 179, 0.02) 0px 1px 3px 0px,
     rgba(60, 68, 76, 0.382) 0px 0px 0px 1px;
   --light-bg: rgba(190, 188, 188, 0.73);
-  --dark-bg: rgba(158, 156, 156, 0.73);
-  --msg-success-color: rgb(41, 155, 18);
-  --msg-error-color: red;
+  --success: rgb(41, 155, 18);
+  --error: red;
+  --fs-base: 1.3rem;
+  --fs-large: 1.6rem;
+  --fs-xl: 5rem;
 }
 
-/* Reset & Global */
 * {
   margin: 0;
   padding: 0;
@@ -26,21 +27,21 @@ html {
 body {
   height: 100vh;
   width: 100%;
-  background-color: white;
-  color: black;
   overflow-x: hidden;
+  background: white;
+  color: black;
   transition: background-color 1s linear;
+  position: relative;
 }
 
-/* Brand Header & Toggle */
+/* Brand & Toggle */
 .brand-container {
   height: 20rem;
   width: 100%;
   padding: 1rem;
 }
 
-.brand-container .dark-mode {
-  width: 100%;
+.dark-mode {
   display: flex;
   justify-content: flex-end;
   padding: 0.4rem;
@@ -49,10 +50,10 @@ body {
 .imgae-container {
   height: 3rem;
   width: 6rem;
-  border-radius: var(--border-radius);
+  border-radius: var(--radius);
   display: flex;
   justify-content: flex-end;
-  background-color: var(--light-bg);
+  background: var(--light-bg);
   padding: 0 0.1rem;
   cursor: pointer;
   transition: var(--transition);
@@ -68,78 +69,76 @@ body {
   justify-content: flex-start;
 }
 
-.brand-container .brand-content {
+.brand-content {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .brand-title {
-  font-size: 5rem;
+  font-size: var(--fs-xl);
   color: rgba(245, 188, 0, 0.938);
   text-transform: capitalize;
 }
 
 .brand-para {
-  font-size: 1.3rem;
+  font-size: var(--fs-base);
   text-align: center;
 }
 
 /* Form */
 .form-container {
   height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.form-container form {
-  height: 100%;
+form {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 1rem;
+  align-items: center;
 }
 
 .search-container {
-  height: 50%;
   width: 100%;
+  gap: 3rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 3rem;
-  padding: 2rem;
 }
 
 .inputvalue {
   height: 5rem;
   padding: 1rem;
   font-size: 1.4rem;
-  border-radius: var(--border-radius);
-  outline: none;
-  border: none;
-  background-color: transparent;
-  box-shadow: var(--input-shadow);
+  border-radius: var(--radius);
   border: 0.1rem solid white;
+  background: transparent;
+  box-shadow: var(--shadow);
+  color: var(--primary);
   letter-spacing: 0.2rem;
-  color: var(--primary-color);
+  outline: none;
 }
 
 input::placeholder {
-  color: var(--primary-color);
-  font-size: 1.3rem;
+  color: var(--primary);
+  font-size: var(--fs-base);
   letter-spacing: 0.3rem;
 }
 
 .addBTn {
-  display: block;
-  padding: 0.5rem;
   width: 50%;
-  background: transparent;
-  border: 0.1rem solid var(--primary-color);
-  color: var(--primary-color);
+  padding: 0.5rem;
   font-size: 2rem;
-  border-radius: var(--border-radius);
+  color: var(--primary);
+  background: transparent;
+  border: 0.1rem solid var(--primary);
+  border-radius: var(--radius);
 }
 
 /* Todo List */
@@ -153,136 +152,84 @@ input::placeholder {
 
 .lists {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 1rem;
+  justify-content: center;
   gap: 0.3rem;
+  padding: 1rem;
   cursor: pointer;
 }
 
 .lists li {
   width: 70%;
+  font-size: var(--fs-base);
   padding-left: 1rem;
-  font-size: 1.3rem;
   text-transform: capitalize;
 }
 
 .deleteBtn {
-  color: var(--primary-color);
-  padding: 0.4rem 1rem;
-  border: none;
-  background-color: transparent;
   font-size: 1.6rem;
-  letter-spacing: 1px;
+  padding: 0.4rem 1rem;
+  background: transparent;
+  border: none;
+  color: var(--primary);
   cursor: pointer;
+  letter-spacing: 1px;
 }
 
-/* Message Container */
+/* Message */
 .message-container {
-  height: auto;
-  width: auto;
-  border-radius: var(--border-radius);
-  position: absolute;
-  top: 1rem;
-  right: 0.7rem;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 999;
+  max-width: 90vw;
+  background: var(--secondary);
+  border-radius: var(--radius);
+  padding: 1rem 1.5rem;
+  box-shadow: var(--shadow);
   transition: var(--transition);
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .msg {
-  background-color: var(--secondary-color);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding-right: 1rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--input-shadow);
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .image-mesg {
-  width: 6rem;
+  width: 5rem;
+  flex-shrink: 0;
 }
 
 .msg-para {
-  font-size: 2rem;
-  color: var(--msg-success-color);
-  font-family: "Poppins";
+  font-size: var(--fs-large);
+  color: var(--success);
+  line-height: 1.4;
 }
 
 .invert {
   filter: invert(100%);
 }
 
-/* Hidden Message Position */
 .positionright {
   right: -100rem;
 }
 
-/* Media Queries */
+/* Responsive */
+@media (min-width: 600px) and (max-width: 1000px) {
+  form { width: 60%; }
+  .brand-para { padding: 0 4rem; }
+}
+
 @media (min-width: 1000px) {
-  .form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .form-container form {
-    width: 50%;
-  }
-
-  .addBTn {
-    width: 30%;
-  }
-  .msg {
-    background-color: var(--secondary-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 1rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--input-shadow);
-  }
+  form { width: 50%; }
+  .addBTn { width: 30%; }
+  .brand-para { padding: 0 20rem; }
 }
 
 @media (min-width: 1000px) and (max-width: 1400px) {
-  .brand-para {
-    padding: 0 29rem;
-  }
-  .msg {
-    background-color: var(--secondary-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 1rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--input-shadow);
-  }
-}
-
-@media (min-width: 600px) and (max-width: 1000px) {
-  .form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .form-container form {
-    width: 60%;
-  }
-
-  .addBTn {
-    width: 50%;
-  }
-
-  .brand-para {
-    padding: 0 4rem;
-  }
-  .msg {
-    background-color: var(--secondary-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 1rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--input-shadow);
-  }
+  .brand-para { padding: 0 29rem; }
 }
