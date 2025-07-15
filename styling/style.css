@@ -231,11 +231,21 @@ input::placeholder {
   .addBTn {
     width: 30%;
   }
+  .message-container {
+    position: absolute;
+    top: 1rem;
+    right: 7rem;
+  }
 }
 
 @media (min-width: 1000px) and (max-width: 1400px) {
   .brand-para {
     padding: 0 29rem;
+  }
+  .message-container {
+    position: absolute;
+    top: 1rem;
+    right: 7rem;
   }
 }
 
@@ -256,5 +266,10 @@ input::placeholder {
 
   .brand-para {
     padding: 0 4rem;
+  }
+  .message-container {
+    position: absolute;
+    top: 1rem;
+    right: 7rem;
   }
 }
