@@ -241,11 +241,45 @@ input::placeholder {
   .brand-para {
     padding: 0 20rem;
   }
+  .message-container {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    max-width: 90vw;
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    z-index: 999;
+    box-shadow: var(--input-shadow);
+    transition: var(--transition);
+    padding: 1rem 1.5rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  .positionright {
+    top: -100rem;
+  }
 }
 
 @media (min-width: 1000px) and (max-width: 1400px) {
   .brand-para {
     padding: 0 29rem;
+  }
+  .message-container {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    max-width: 90vw;
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    z-index: 999;
+    box-shadow: var(--input-shadow);
+    transition: var(--transition);
+    padding: 1rem 1.5rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  .positionright {
+    top: -100rem;
   }
 }
 
@@ -266,5 +300,22 @@ input::placeholder {
 
   .brand-para {
     padding: 0 4rem;
+  }
+  .message-container {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    max-width: 90vw;
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    z-index: 999;
+    box-shadow: var(--input-shadow);
+    transition: var(--transition);
+    padding: 1rem 1.5rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  .positionright {
+    top: -100rem;
   }
 }
