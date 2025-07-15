@@ -1,6 +1,6 @@
 :root {
   --primary-color: orange;
-  --secondary-color: rgb(0, 0, 0);
+  --secondary-color: rgba(255, 255, 255, 0.832);
   --border-radius: 1rem;
   --transition: all 0.4s linear;
   --input-shadow: rgba(179, 179, 179, 0.02) 0px 1px 3px 0px,
@@ -195,6 +195,7 @@ input::placeholder {
   align-items: center;
   padding-right: 1rem;
   border-radius: var(--border-radius);
+  box-shadow: var(--input-shadow);
 }
 
 .image-mesg {
