@@ -38,14 +38,14 @@ const showMessage = (text = "Success", type = "add") => {
 
   // Optional styling based on type
   if (type === "error") {
-    updatedPara.style.color = "red";
+    updatedPara.style.color = "rgba(219, 19, 39, 0.68)";
   } else {
     updatedPara.style.color = "rgba(19, 219, 29, 0.68)";
   }
 
   setTimeout(() => {
     messageContainer.classList.add("positionright");
-  }, 2500);
+  }, 2000);
 };
 
 const geTodoListsFromLocal = () => {
