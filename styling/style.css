@@ -214,6 +214,19 @@ input::placeholder {
 
 /* Media Queries */
 @media (min-width: 1000px) {
+  .Todo-lists-container {
+    max-width: 100%;
+    padding: 3rem 4rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
   .form-container form {
     width: 50%;
   }
@@ -225,6 +238,9 @@ input::placeholder {
   .brand-para {
     padding: 0 29rem;
   }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
   .Todo-lists-container {
     max-width: 100%;
     padding: 3rem 4rem 4rem;
@@ -232,9 +248,12 @@ input::placeholder {
     flex-direction: column;
     gap: 1rem;
   }
-}
-
-@media (min-width: 600px) and (max-width: 1000px) {
+  .msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
   .form-container form {
     width: 60%;
   }
@@ -245,12 +264,5 @@ input::placeholder {
 
   .brand-para {
     padding: 0 4rem;
-  }
-  .Todo-lists-container {
-    max-width: 100%;
-    padding: 3rem 4rem 4rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
   }
 }
