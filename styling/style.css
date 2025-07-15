@@ -29,7 +29,6 @@ body {
   background-color: white;
   color: black;
   overflow-x: hidden;
-  overflow-inline: hidden;
   transition: background-color 1s linear;
 }
 
@@ -178,38 +177,34 @@ input::placeholder {
   cursor: pointer;
 }
 
-/* ✅ Fixed Message Container */
+/* Message Container */
 .message-container {
-  position: fixed;
-  top: 2rem;
-  right: 2rem;
-  max-width: 90vw;
-  background-color: var(--secondary-color);
+  height: auto;
+  width: auto;
   border-radius: var(--border-radius);
-  z-index: 999;
-  box-shadow: var(--input-shadow);
+  position: absolute;
+  top: 1rem;
+  right: 0.7rem;
   transition: var(--transition);
-  padding: 1rem 1.5rem;
-  overflow-wrap: break-word;
-  word-break: break-word;
 }
 
 .msg {
+  background-color: var(--secondary-color);
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  padding-right: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--input-shadow);
 }
 
 .image-mesg {
-  width: 5rem;
-  flex-shrink: 0;
+  width: 6rem;
 }
 
 .msg-para {
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: var(--msg-success-color);
-  line-height: 1.4;
   font-family: "Poppins";
 }
 
@@ -237,26 +232,14 @@ input::placeholder {
   .addBTn {
     width: 30%;
   }
-
-  .brand-para {
-    padding: 0 20rem;
-  }
-  .message-container {
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    max-width: 90vw;
+  .msg {
     background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
     border-radius: var(--border-radius);
-    z-index: 999;
     box-shadow: var(--input-shadow);
-    transition: var(--transition);
-    padding: 1rem 1.5rem;
-    overflow-wrap: break-word;
-    word-break: break-word;
-  }
-  .positionright {
-    top: -100rem;
   }
 }
 
@@ -264,22 +247,14 @@ input::placeholder {
   .brand-para {
     padding: 0 29rem;
   }
-  .message-container {
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    max-width: 90vw;
+  .msg {
     background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
     border-radius: var(--border-radius);
-    z-index: 999;
     box-shadow: var(--input-shadow);
-    transition: var(--transition);
-    padding: 1rem 1.5rem;
-    overflow-wrap: break-word;
-    word-break: break-word;
-  }
-  .positionright {
-    top: -100rem;
   }
 }
 
@@ -301,21 +276,13 @@ input::placeholder {
   .brand-para {
     padding: 0 4rem;
   }
-  .message-container {
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    max-width: 90vw;
+  .msg {
     background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
     border-radius: var(--border-radius);
-    z-index: 999;
     box-shadow: var(--input-shadow);
-    transition: var(--transition);
-    padding: 1rem 1.5rem;
-    overflow-wrap: break-word;
-    word-break: break-word;
-  }
-  .positionright {
-    top: -100rem;
   }
 }
