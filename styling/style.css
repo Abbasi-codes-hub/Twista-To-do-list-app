@@ -139,7 +139,7 @@ input::placeholder {
 /* Todo List */
 .Todo-lists-container {
   max-width: 100%;
-  padding: 0 4rem 4rem;
+  padding: 3rem 4rem 4rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -174,7 +174,6 @@ input::placeholder {
 /* Message Box */
 .msg{
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1rem;
