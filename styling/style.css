@@ -34,7 +34,6 @@ body {
   position: relative;
 }
 
-/* Brand & Toggle */
 .brand-container {
   height: 20rem;
   width: 100%;
@@ -87,7 +86,6 @@ body {
   text-align: center;
 }
 
-/* Form */
 .form-container {
   height: 12rem;
   display: flex;
@@ -141,7 +139,6 @@ input::placeholder {
   border-radius: var(--radius);
 }
 
-/* Todo List */
 .Todo-lists-container {
   max-width: 100%;
   padding: 0 4rem 4rem;
@@ -176,7 +173,6 @@ input::placeholder {
   letter-spacing: 1px;
 }
 
-/* Message */
 .message-container {
   position: fixed;
   top: 2rem;
@@ -218,7 +214,6 @@ input::placeholder {
   right: -100rem;
 }
 
-/* Responsive */
 @media (min-width: 600px) and (max-width: 1000px) {
   form { width: 60%; }
   .brand-para { padding: 0 4rem; }
@@ -232,4 +227,21 @@ input::placeholder {
 
 @media (min-width: 1000px) and (max-width: 1400px) {
   .brand-para { padding: 0 29rem; }
+}
+
+@media (max-width: 600px) {
+  .message-container {
+    right: 1rem;
+    left: 1rem;
+    width: auto;
+    max-width: calc(100% - 2rem);
+  }
+  .msg {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .msg-para {
+    font-size: 1.5rem;
+  }
 }
