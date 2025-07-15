@@ -184,7 +184,7 @@ input::placeholder {
   border-radius: var(--border-radius);
   position: absolute;
   top: 1rem;
-  right: .7rem;
+  right: 0.7rem;
   transition: var(--transition);
 }
 
@@ -232,11 +232,29 @@ input::placeholder {
   .addBTn {
     width: 30%;
   }
+  .msg {
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--input-shadow);
+  }
 }
 
 @media (min-width: 1000px) and (max-width: 1400px) {
   .brand-para {
     padding: 0 29rem;
+  }
+  .msg {
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--input-shadow);
   }
 }
 
@@ -257,5 +275,14 @@ input::placeholder {
 
   .brand-para {
     padding: 0 4rem;
+  }
+  .msg {
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--input-shadow);
   }
 }
