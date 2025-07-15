@@ -77,7 +77,7 @@ const addTodoLists = (e) => {
     adDynamicallyDataFromLocal(loCalTodoLists);
     showMessage("Successfully added", "add");
   } else {
-    showMessage("Item already exists or empty input", "error");
+    showMessage("Item already exists");
   }
 };
 
